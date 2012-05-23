@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CSS3D Playground</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+  <link type="text/css" href="css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  <header>
+
+    <h1>3D CSS3 Playground (Early)</h1>
+    <p class="intro">This is an experimental CSS3 3D-Playground, should work in newish versions of Chrome and Safari.</p>
+
+  </header>
+  <div role="main">
+
+    <div id="stage">
+      <p>Don't Panic!</p>
+      <div id="origin"> </div>
+    </div>
+
+    <div id="controls">
+      <div class="block1">
+        Stage Text: <input type="text" value="Don't Panic!" id="stageText">
+        &nbsp;&nbsp;Background-Image:
+        <select id="backgroundImage">
+          <option value="none">none</option>
+          <option value="nyc">nyc</option>
+          <option value="treeroad">treeroad</option>
+          <option value="blackwhite">blackwhite</option>          
+        </select>
+        &nbsp;&nbsp;Text-Color:
+        <select id="textColor">
+          <option value="black">black</option>
+          <option value="white">white</option>
+          <option value="red">red</option>
+          <option value="blue">blue</option>          
+        </select>
+        &nbsp;&nbsp; Show Grid: <input type="checkbox" id="showGrid" checked/>      
+      </div>
+      <div class="block3">
+        <h3>Font-Size: <span class="fontSizeValue">30px</span></h3>
+        <div id="sliderFontSize"></div>
+      </div>
+
+      <div class="block3">
+      <h3>Text Top: <span class="topValue">50%</span></h3>
+      <div id="sliderTop"></div>
+      </div>
+
+      <div class="block3">
+      <h3>Text Left: <span class="leftValue">50%</span></h3>
+      <div id="sliderLeft"></div>
+      </div>
+
+      <div class="block3">
+      <h3>Perspective: <span class="perspectiveValue">600</span></h3>
+      <div id="sliderPerspective"></div>
+      </div>
+      <div class="block3">
+      <h3>Origin X: <span class="originXValue">50%</span></h3>
+      <div id="sliderOriginX"></div>
+      </div>
+      <div class="block3">
+      <h3>Origin Y: <span class="originYValue">50%</span></h3>
+      <div id="sliderOriginY"></div>
+      </div>
+
+
+      <div class="block3">
+      <h3>Rotate X: <span class="rotateXValue">0deg</span></h3>
+      <div id="sliderRotateX"></div>
+      </div>
+
+      <div class="block3">
+      <h3>Rotate Y: <span class="rotateYValue">-90deg</span></h3>
+      <div id="sliderRotateY"></div>
+      </div>
+
+      <div class="block3">
+      <h3>Rotate Z: <span class="rotateZValue">0deg</span></h3>
+      <div id="sliderRotateZ"></div>
+      </div>
+
+
+    </div>
+
+    <h2>CSS</h2>
+
+    <pre class="code">
+
+#stage 
+{ 
+  -webkit-perspective: <span class="perspectiveValue">600</span>;
+  -webkit-perspective-origin-x: <span class="originXValue">50%</span>;
+  -webkit-perspective-origin-y: <span class="originYValue">50%</span>;
+}
+
+#stage p
+{
+  font-size: <span class="fontSizeValue">30px</span>; 
+  top: <span class="topValue">50%</span>;
+  left: <span class="leftValue">50%</span>;
+  -webkit-transform: rotateX(<span class="rotateXValue">0deg</span>) rotateY(<span class="rotateYValue">-90deg</span>) rotateZ(<span class="rotateZValue">0deg</span>);
+}
+
+    </pre>
+
+
+  </div>
+  <footer>
+    <h4>by <a href="http://ntonio.de">Antonio Radovcic</a></h4>
+  </footer>
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript" src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>
+
+</body>
+</html>
