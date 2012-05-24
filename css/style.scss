@@ -77,6 +77,9 @@ $initialRotateX : 0deg;
 $initialRotateY : -90deg;
 $initialRotateZ : 0deg;
 
+$controlsMargin : 2%;
+$block2width: 50% - $controlsMargin * 2;
+$block3width: 33.333% - $controlsMargin * 2;
 
 
 body {background:#fff; width:1200px; margin:0 auto;}
@@ -128,9 +131,9 @@ p.intro {text-align:center;}
 
 #controls {width:80%; margin:20px 10%; overflow:hidden; padding-bottom:20px; margin-bottom:20px;
 
-  .block1 {text-align:center;}
-  .block2 {width:40%; float:left; margin:0 5%;}
-  .block3 {width:30%; float:left; margin:0 1.6666%;}
+  .block1 {text-align:center; margin:0 $controlsMargin;}
+  .block2 {width:$block2width; float:left; margin:0 $controlsMargin;}
+  .block3 {width:$block3width; float:left; margin:0 $controlsMargin;}
 
 }
 

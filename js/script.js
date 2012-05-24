@@ -50,8 +50,8 @@ var perspectiveGridWidth = 2000;
 
 		$( "#sliderFontSize" ).slider({
 			value:64,
-			min: 30,
-			max: 200,
+			min: 1,
+			max: 500,
 			slide: function(event, ui) {
 				$('#stage p').css({'font-size': ui.value + "px"});
 				$('.fontSizeValue').html(ui.value + "px");

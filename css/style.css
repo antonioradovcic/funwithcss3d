@@ -283,15 +283,16 @@ p.intro {
   padding-bottom: 20px;
   margin-bottom: 20px; }
   #controls .block1 {
-    text-align: center; }
+    text-align: center;
+    margin: 0 2%; }
   #controls .block2 {
-    width: 40%;
+    width: 46%;
     float: left;
-    margin: 0 5%; }
+    margin: 0 2%; }
   #controls .block3 {
-    width: 30%;
+    width: 29.333%;
     float: left;
-    margin: 0 1.6666%; }
+    margin: 0 2%; }
 
 pre.code {
   width: 76%;
