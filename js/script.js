@@ -8,6 +8,9 @@ $(function() {
 var rotateX = 0;
 var rotateY = -90;
 var rotateZ = 0;
+var skewX = 0;
+var skewY = 0;
+
 var perspectiveGridWidth = 2000;
 
 
@@ -130,7 +133,7 @@ var perspectiveGridWidth = 2000;
 			slide: function(event, ui) {
 				rotateX = ui.value;
 				$('.rotateXValue').html(ui.value + "deg");
-				changeRotation(rotateX, rotateY, rotateZ);
+				updateTransform(rotateX, rotateY, rotateZ, skewX, skewY);
 			}
 		});
 
@@ -142,7 +145,8 @@ var perspectiveGridWidth = 2000;
 			slide: function(event, ui) {
 				rotateY = ui.value;
 				$('.rotateYValue').html(ui.value + "deg");
-				changeRotation(rotateX, rotateY, rotateZ);
+				updateTransform(rotateX, rotateY, rotateZ, skewX, skewY);
+
 			}
 		});
 
@@ -154,19 +158,51 @@ var perspectiveGridWidth = 2000;
 			slide: function(event, ui) {
 				rotateZ = ui.value;
 				$('.rotateZValue').html(ui.value + "deg");
-				changeRotation(rotateX, rotateY, rotateZ);
+				updateTransform(rotateX, rotateY, rotateZ, skewX, skewY);
+			}
+		});
+
+
+
+		$( "#sliderSkewX" ).slider({
+			value:0,
+			min: -360,
+			max: 360,
+			step: 5,
+			slide: function(event, ui) {
+				skewX = ui.value;
+				$('.skewXValue').html(ui.value + "deg");
+				updateTransform(rotateX, rotateY, rotateZ, skewX, skewY);
+			}
+		});
+
+
+		$( "#sliderSkewY" ).slider({
+			value:0,
+			min: -360,
+			max: 360,
+			step: 5,
+			slide: function(event, ui) {
+				skewY = ui.value;
+				$('.skewYValue').html(ui.value + "deg");
+				updateTransform(rotateX, rotateY, rotateZ, skewX, skewY);
 			}
 		});
 
 
 
 
-		function changeRotation(x,y,z) {
 
-			$('#stage p').css({'-webkit-transform': 'rotateX('+ x +'deg) rotateY('+ y +'deg) rotateZ('+ z +'deg)'});
+
+
+		function updateTransform(rx,ry,rz, sx, sy) {
+
+			$('#stage p').css({'-webkit-transform': 'rotateX('+ rx +'deg) rotateY('+ ry +'deg) rotateZ('+ rz +'deg) skewX('+ sx +'deg) skewY('+ sy +'deg)'});
 
 		}
 
+
+	
 
 	});
 
